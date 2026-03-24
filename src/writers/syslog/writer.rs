@@ -144,7 +144,7 @@ impl LogWriter for SyslogWriter {
             }
             buf.clear();
             reader.read_line(&mut buf).unwrap();
-            assert!(buf.is_empty(), "Found more log lines than expected: {buf} ",);
+            assert!(buf.is_empty(), "Found more log lines than expected: {buf} ");
         }
     }
 }

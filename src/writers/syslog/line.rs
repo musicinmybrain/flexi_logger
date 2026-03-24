@@ -181,7 +181,7 @@ fn write_key_value_pairs(
     let mut kv_written = false;
     #[cfg(feature = "kv")]
     if record.key_values().count() > 0 {
-        write!(w, "[log_kv ",)?;
+        write!(w, "[log_kv ")?;
         let mut kv_stream = KvStream(w, false);
         record.key_values().visit(&mut kv_stream).ok();
         write!(w, "] ")?;

@@ -227,7 +227,7 @@ impl LogWriter for StdWriter {
             }
             buf.clear();
             reader.read_line(&mut buf).unwrap();
-            assert!(buf.is_empty(), "Found more log lines than expected: {buf} ",);
+            assert!(buf.is_empty(), "Found more log lines than expected: {buf} ");
         }
     }
 }
